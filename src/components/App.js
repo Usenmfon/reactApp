@@ -1,32 +1,19 @@
-import React from "react";
+import React from "react"
+// import ContactCard from "./ContactCard"
+import Product from "./product"
+import products from "./ProductData"
 
-function App() {
-    return (
-        <div className="contacts">
-            <div className="contact-card">
-                <h3>Mr. Wiskerson</h3>
-                <p>Phone: (212) 555-1234</p>
-                <p>Email: mr.wiskaz@catnap.com</p>
-            </div>
-
-            <div className="contact-card">
-                <h3>FluffyKins</h3>
-                <p>Phone: (212) 555-1234</p>
-                <p>Email: mr.wiskaz@catnap.com</p>
-            </div>
-
-            <div className="contact-card">
-                <h3>Destroyer</h3>
-                <p>Phone: (212) 555-1234</p>
-                <p>Email: mr.wiskaz@catnap.com</p>
-            </div>
-
-            <div className="contact-card">
-                <h3>Felix</h3>
-                <p>Phone: (212) 555-1234</p>
-                <p>Email: mr.wiskaz@catnap.com</p>
-            </div>
+function App(){
+    const result = products.map(item =>
+        <Product key={item.id} prod={item} />)
+    return(
+        // <ContactCard contact={{name: "Mr Weatherman", 
+        // phone: "+234 (020) 67584",
+        // email: "Weath@gmail.com"}}/>
+        <div>
+            {result}
         </div>
+        
     )
 }
 
